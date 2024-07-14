@@ -4,12 +4,16 @@
   "description": "chai or code backend series",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node index.js",
+    "start": "node index.js"
   },
   "keywords": [
     "javascript",
     "backend"
   ],
   "author": "majid ali jokhio",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
