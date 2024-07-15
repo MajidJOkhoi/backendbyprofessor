@@ -5,10 +5,10 @@ const path = require('path');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         // Set destination directory for uploaded files
-        cb(null, path.resolve(__dirname, './public/temp/uploads'));
+        cb(null, path.resolve(__dirname, '../public/data/uploads'));
     },
     filename: (req, file, cb) => {
-        
+        // Set file name format
         cb(null, Date.now() + '-' + file.originalname);
     }
 });
@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
 // Configure Multer upload settings
 const upload = multer({
     storage: storage, 
-    limits: { fileSize: 30 * 1024 * 1024 } // Limit file size to 30 MB
+    limits: { fileSize: 30 * 1024 * 1024 } 
 });
 
-module.exports = upload;
+module.exports = upload; 
