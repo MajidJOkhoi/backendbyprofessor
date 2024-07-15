@@ -67,7 +67,6 @@ userSchema.methods.isPasswordCorrect = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-
 // Method to generate an access token for the user
 userSchema.methods.generateAuthToken = function () {
   // Sign the JWT with the user's ID, email, username, and full name

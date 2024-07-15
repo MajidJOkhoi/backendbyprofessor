@@ -24,5 +24,4 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json({ limit: "20kb" }));
 
 
-
 module.exports = app;
