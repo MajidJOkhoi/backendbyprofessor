@@ -5,7 +5,7 @@ const fs = require("fs");
 cloudinary.config({ 
   cloud_name: 'djtcfxvlr', 
   api_key: '722188816121671', 
-  api_secret: 'amdaK6fXDIhRX_LRkauhAkuiXCw' // Click 'View Credentials' below to copy your API secret
+  api_secret: 'amdaK6fXDIhRX_LRkauhAkuiXCw' 
 });
 
 
@@ -25,8 +25,9 @@ const uploadOnCloudinary = async (localfilePath) => {
     });
 
     // Log Cloudinary URL of the uploaded file
-    console.log("File uploaded successfully to Cloudinary:", response.url);
-  fs.unlinkSync(localfilePath);
+
+    fs.unlinkSync(localfilePath);
+
     // Return Cloudinary response
     return response;
   } catch (error) {
